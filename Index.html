@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pé na Areia Ubatuba</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Roboto', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #eaf8f6;
+      color: #333;
+    }
+    header {
+      background: linear-gradient(135deg, #00bfa5, #00796b);
+      color: white;
+      padding: 2rem 1rem;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+    }
+    header p {
+      font-size: 1.2rem;
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      background: #ffffff;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      padding: 1rem;
+    }
+    nav a {
+      margin: 0 15px;
+      text-decoration: none;
+      color: #00796b;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+    nav a:hover {
+      color: #004d40;
+    }
+    section {
+      padding: 3rem 1rem;
+      max-width: 1000px;
+      margin: auto;
+    }
+    .imovel {
+      background: white;
+      padding: 1.5rem;
+      margin-bottom: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+    .imovel img {
+      width: 100%;
+      border-radius: 10px;
+      margin-bottom: 1rem;
+    }
+    .btn-whatsapp {
+      background: #25d366;
+      color: white;
+      padding: 0.8rem 1.2rem;
+      border: none;
+      border-radius: 5px;
+      text-decoration: none;
+      display: inline-block;
+      margin-top: 10px;
+      font-weight: bold;
+      transition: background 0.3s ease;
+    }
+    .btn-whatsapp:hover {
+      background: #1ebe5b;
+    }
+    form {
+      background: white;
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      max-width: 700px;
+      margin: auto;
+    }
+    form input, form textarea {
+      width: 100%;
+      padding: 0.75rem;
+      margin-bottom: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 1rem;
+    }
+    form button {
+      background: #00bfa5;
+      color: white;
+      padding: 0.8rem 1.5rem;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 1rem;
+      font-weight: bold;
+      transition: background 0.3s ease;
+    }
+    form button:hover {
+      background: #009688;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Pé na Areia Ubatuba</h1>
+    <p>Aluguel de imóveis por temporada direto com o proprietário</p>
+  </header>
+
+  <nav>
+    <a href="#imoveis">Imóveis</a>
+    <a href="#cadastro">Cadastrar Imóvel</a>
+    <a href="https://wa.me/5512997994449" class="btn-whatsapp">Reservar pelo WhatsApp</a>
+  </nav>
+
+  <section id="imoveis">
+    <h2>Imóveis Disponíveis</h2>
+    <div class="imovel">
+      <img src="https://images.unsplash.com/photo-1560448071-16d9bdfdf9b9" alt="Casa na praia">
+      <h3>Casa Pé na Areia - Praia do Tenório</h3>
+      <p>3 quartos, 2 banheiros, sala com vista para o mar, cozinha equipada, varanda com rede, vaga para 3 carros.</p>
+      <p><strong>R$ 450,00 por dia</strong></p>
+      <a href="https://wa.me/5512997994449" class="btn-whatsapp">Reservar via WhatsApp</a>
+    </div>
+  </section>
+
+  <section id="cadastro">
+    <h2>Cadastrar seu Imóvel</h2>
+    <form>
+      <input type="text" name="nome" placeholder="Seu nome" required>
+      <input type="text" name="telefone" placeholder="WhatsApp para contato" required>
+      <input type="text" name="titulo" placeholder="Título do imóvel" required>
+      <textarea name="descricao" rows="4" placeholder="Descrição do imóvel" required></textarea>
+      <input type="number" name="preco" placeholder="Preço por dia (R$)" required>
+      <input type="file" name="foto" accept="image/*">
+      <button type="submit">Enviar Cadastro</button>
+    </form>
+  </section>
+</body>
+  </html>
