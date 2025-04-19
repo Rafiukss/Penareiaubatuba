@@ -1,229 +1,32 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<header>
-  <img src="https://penareiaubatuba.github.io/Penareiaubatuba/logo.png" alt="Logo Pé na Areia" style="max-height: 415px; margin-bottom: 0rem;">
-  
-  <p>Imóveis por temporada em Ubatuba e região</p>
-</header>
-  
+<p>Preencha o formulário abaixo e entraremos em contato com você!</p>
+<form onsubmit="event.preventDefault(); enviarFormulario();">
+  <input type="text" id="nome" placeholder="Seu nome" required />
+  <input type="tel" id="telefone" placeholder="Seu telefone (com DDD)" required />
+  <select id="tipo" required>
+    <option value="">Tipo de imóvel</option>
+    <option value="Casa">Casa</option>
+    <option value="Apartamento">Apartamento</option>
+    <option value="Kitnet">Kitnet</option>
+    <option value="Outro">Outro</option>
+  </select>
+  <textarea id="mensagem" rows="4" placeholder="Informações sobre o imóvel" required></textarea>
+  <button type="submit" class="form-btn">Enviar para o WhatsApp</button>
+</form>
 
+<script>
+  function enviarFormulario() {
+    const nome = document.getElementById("nome").value;
+    const telefone = document.getElementById("telefone").value;
+    const tipo = document.getElementById("tipo").value;
+    const mensagem = document.getElementById("mensagem").value;
 
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet" />
-  <style>
-    body {
-      font-family: 'Montserrat', sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #f0f9f9;
-      color: #333;
-    }
+    const texto = `Olá, meu nome é ${nome}. Quero anunciar um imóvel do tipo ${tipo}. Meu telefone é ${telefone}. Informações: ${mensagem}`;
+    const url = `https://wa.me/5512997994449?text=${encodeURIComponent(texto)}`;
 
-    .header {
-      background-color: #1ec9b7;
-      text-align: center;
-      padding: 40px 20px 0;
-      border-bottom-left-radius: 50px;
-      border-bottom-right-radius: 50px;
-    }
+    window.open(url, "_blank");
+  }
+</script>
 
-    .header img {
-      max-width: 180px;
-      margin-bottom: 20px;
-    }
-
-    .content {
-      padding: 40px 20px;
-      text-align: center;
-    }
-
-    .content h2 {
-      font-size: 2rem;
-      margin-bottom: 40px;
-    }
-
-    .cards {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 30px;
-    }
-
-    .card {
-      background: #fff;
-      border-radius: 16px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-      overflow: hidden;
-      width: 300px;
-      text-align: left;
-    }
-
-    .card img {
-      width: 100%;
-      height: 180px;
-      object-fit: cover;
-    }
-
-    .card-body {
-      padding: 20px;
-    }
-
-    .card-body h3 {
-      margin: 0 0 10px;
-      color: #004d4d;
-    }
-
-    .card-body p {
-      margin: 0 0 10px;
-      font-size: 0.95rem;
-    }
-
-    .card-body strong {
-      font-size: 1.1rem;
-    }
-
-    .btn {
-      display: inline-block;
-      margin-top: 10px;
-      background-color: #25d366;
-      color: white;
-      padding: 10px 16px;
-      text-decoration: none;
-      border-radius: 8px;
-      font-weight: bold;
-      transition: 0.3s;
-    }
-
-    .btn:hover {
-      background-color: #1ebe5b;
-    }
-
-    .form-section {
-      background: #e7f8f7;
-      padding: 40px 20px;
-      text-align: center;
-      margin-top: 60px;
-    }
-
-    .form-section h2 {
-      margin-bottom: 20px;
-    }
-
-    form {
-      max-width: 500px;
-      margin: auto;
-      display: flex;
-      flex-direction: column;
-      gap: 15px;
-    }
-
-    input, textarea, select {
-      padding: 12px;
-      border-radius: 8px;
-      border: 1px solid #ccc;
-      font-size: 1rem;
-    }
-
-    textarea {
-      resize: vertical;
-    }
-
-    .form-btn {
-      background-color: #1ec9b7;
-      color: white;
-      border: none;
-      cursor: pointer;
-      padding: 12px;
-      font-size: 1rem;
-      font-weight: bold;
-      border-radius: 8px;
-      transition: background 0.3s;
-    }
-
-    .form-btn:hover {
-      background-color: #17a89d;
-    }
-
-    footer {
-      text-align: center;
-      background-color: #d8f0ef;
-      padding: 30px 20px;
-      font-size: 0.9rem;
-      color: #555;
-    }
-  </style>
-  <script>
-    function enviarFormulario() {
-      const nome = document.getElementById("nome").value;
-      const telefone = document.getElementById("telefone").value;
-      const tipo = document.getElementById("tipo").value;
-      const mensagem = document.getElementById("mensagem").value;
-
-      const texto = `Olá, meu nome é ${nome}. Quero anunciar um imóvel (${tipo}).\nTelefone: ${telefone}\n\nDetalhes: ${mensagem}`;
-      const url = `https://wa.me/5512997994449?text=${encodeURIComponent(texto)}`;
-      window.open(url, "_blank");
-    }
-  </script>
-</head>
-<body>
-
-  <div class="header">
-    <img src="https://penareiaubatuba.github.io/Penareiaubatuba/assets/logo.png" alt="Logo Pé na Areia Ubatuba" />
-  </div>
-
-  <div class="content">
-    <h2>Imóveis Disponíveis</h2>
-    <div class="cards">
-      <div class="card">
-        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=60" alt="Casa Praia do Tenório" />
-        <div class="card-body">
-          <h3>Casa Praia do Tenório</h3>
-          <p>3 quartos, varanda com rede, churrasqueira e a poucos passos da areia.</p>
-          <p><strong>R$ 450,00</strong> por dia</p>
-          <a href="https://wa.me/5512997994449" class="btn">Reservar no WhatsApp</a>
-        </div>
-      </div>
-      <div class="card">
-        <img src="https://images.unsplash.com/photo-1580587771525-78b9dba3b914?auto=format&fit=crop&w=800&q=60" alt="Kitnet no Itaguá" />
-        <div class="card-body">
-          <h3>Kitnet no Itaguá</h3>
-          <p>Ideal para casal, perto de restaurantes, com ar-condicionado e Wi-Fi.</p>
-          <p><strong>R$ 250,00</strong> por dia</p>
-          <a href="https://wa.me/5512997994449" class="btn">Reservar no WhatsApp</a>
-        </div>
-      </div>
-      <div class="card">
-        <img src="https://images.unsplash.com/photo-1507089947368-19c1da9775ae?auto=format&fit=crop&w=800&q=60" alt="Apartamento Centro" />
-        <div class="card-body">
-          <h3>Apartamento Centro</h3>
-          <p>2 quartos, cozinha completa, garagem e vista para o mar.</p>
-          <p><strong>R$ 380,00</strong> por dia</p>
-          <a href="https://wa.me/5512997994449" class="btn">Reservar no WhatsApp</a>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="form-section">
-    <h2>Quer anunciar seu imóvel?</h2>
-    <p>Preencha o formulário abaixo e entraremos em contato com você!</p>
-    <form onsubmit="event.preventDefault(); enviarFormulario();">
-      <input type="text" id="nome" placeholder="Seu nome" required />
-      <input type="tel" id="telefone" placeholder="Seu telefone (com DDD)" required />
-      <select id="tipo" required>
-        <option value="">Tipo de imóvel</option>
-        <option value="Casa">Casa</option>
-        <option value="Apartamento">Apartamento</option>
-        <option value="Kitnet">Kitnet</option>
-        <option value="Outro">Outro</option>
-      </select>
-      <textarea id="messagem" rows="4" placeholder="Informações sobre o imóvel" required></textarea>
-      <button type="submit" class="form-btn">Enviar para o WhatsApp</button>
-    </form>
-  </div>
-
-  <footer>
-    © 2025 Pé na Areia Ubatuba. Todos os direitos reservados.
-  </footer>
-
-</body>
-</html>
+<footer>
+  © 2025 Pé na Areia Ubatuba. Todos os direitos reservados.
+</footer>
