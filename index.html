@@ -9,7 +9,7 @@
   <!-- Meta Tags para redes sociais -->
   <meta property="og:title" content="Pé na Areia Ubatuba" />
   <meta property="og:description" content="Imóveis por temporada em Ubatuba - Casas, kitnets e apartamentos próximos à praia!" />
-  <meta property="og:image" content="https://penareiaubatuba.github.io/Penareiaubatuba/logo.png" />
+  <meta property="og:image" content="https://i.imgur.com/SEUARQUIVO.png" />
   <meta property="og:url" content="https://penareiaubatuba.github.io/Penareiaubatuba/" />
   <meta property="og:type" content="website" />
 
@@ -167,39 +167,4 @@
     <div class="formulario">
       <h2>Quer anunciar seu imóvel?</h2>
       <p>Preencha o formulário abaixo e entraremos em contato com você!</p>
-      <form onsubmit="event.preventDefault(); enviarFormulario();">
-        <input type="text" id="nome" placeholder="Seu nome" required />
-        <input type="tel" id="telefone" placeholder="Seu telefone (com DDD)" required />
-        <select id="tipo" required>
-          <option value="">Tipo de imóvel</option>
-          <option value="Casa">Casa</option>
-          <option value="Apartamento">Apartamento</option>
-          <option value="Kitnet">Kitnet</option>
-          <option value="Outro">Outro</option>
-        </select>
-        <textarea id="mensagem" rows="4" placeholder="Informações sobre o imóvel" required></textarea>
-        <button type="submit" class="form-btn">Enviar para o WhatsApp</button>
-      </form>
-    </div>
-  </div>
-
-  <footer>
-    © 2025 Pé na Areia Ubatuba. Todos os direitos reservados.
-  </footer>
-
-  <script>
-    function enviarFormulario() {
-      const nome = document.getElementById('nome').value;
-      const telefone = document.getElementById('telefone').value;
-      const tipo = document.getElementById('tipo').value;
-      const mensagem = document.getElementById('mensagem').value;
-
-      const texto = `Olá! Meu nome é ${nome}. Gostaria de anunciar um imóvel do tipo: ${tipo}. Informações: ${mensagem}. Telefone: ${telefone}`;
-      const url = `https://wa.me/5512997994449?text=${encodeURIComponent(texto)}`;
-
-      window.open(url, '_blank');
-    }
-  </script>
-
-</body>
-      </html>
+      <form12
