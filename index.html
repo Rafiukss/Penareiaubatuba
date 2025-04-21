@@ -1,5 +1,4 @@
-<!DOCTYPE html>
-<html lang="pt-br">
+<!DOCTYPE html><html lang="pt-br">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -11,151 +10,232 @@
       font-family: 'Montserrat', sans-serif;
       background: #f3f9f9;
       color: #333;
-    }
+    }header {
+  height: 250px;
+  background: url('logo.png') no-repeat center center;
+  background-size: cover;
+}
 
-    header {
-      height: 250px;
-      background: url('logo.png') no-repeat center center;
-      background-size: cover;
-    }
+.container {
+  padding: 2rem 1rem;
+  max-width: 1200px;
+  margin: auto;
+}
 
-    .container {
-      padding: 2rem 1rem;
-      max-width: 1200px;
-      margin: auto;
-    }
+h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+}
 
-    h2 {
-      text-align: center;
-      margin-bottom: 2rem;
-    }
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
 
-    .cards {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 2rem;
-    }
+.card {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
 
-    .card {
-      background: white;
-      border-radius: 12px;
-      overflow: hidden;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-      transition: transform 0.3s ease;
-    }
+.card:hover {
+  transform: translateY(-5px);
+}
 
-    .card:hover {
-      transform: translateY(-5px);
-    }
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
 
-    .card img {
-      width: 100%;
-      height: 200px;
-      object-fit: cover;
-    }
+.card-body {
+  padding: 1rem;
+}
 
-    .card-body {
-      padding: 1rem;
-    }
+.card-body h3 {
+  margin-top: 0;
+}
 
-    .card-body h3 {
-      margin-top: 0;
-    }
+.btn {
+  display: inline-block;
+  background: #25d366;
+  color: white;
+  padding: 0.7rem 1.2rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s ease;
+  margin-top: 10px;
+}
 
-    .btn {
-      display: inline-block;
-      background: #25d366;
-      color: white;
-      padding: 0.7rem 1.2rem;
-      border-radius: 8px;
-      text-decoration: none;
-      font-weight: bold;
-      transition: background 0.3s ease;
-      margin-top: 10px;
-    }
+.btn:hover {
+  background: #1ebe5b;
+}
 
-    .btn:hover {
-      background: #1ebe5b;
-    }
+.form-section {
+  margin-top: 4rem;
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
 
-    .form-section {
-      margin-top: 4rem;
-      background: white;
-      padding: 2rem;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-    }
+.form-section form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
 
-    .form-section form {
-      display: flex;
-      flex-direction: column;
-      gap: 1rem;
-    }
+.form-section input,
+.form-section select,
+.form-section textarea {
+  padding: 0.8rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
 
-    .form-section input,
-    .form-section select,
-    .form-section textarea {
-      padding: 0.8rem;
-      border-radius: 6px;
-      border: 1px solid #ccc;
-      font-size: 1rem;
-    }
+.form-btn {
+  background-color: #25d366;
+  color: white;
+  border: none;
+  padding: 0.8rem;
+  font-size: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+}
 
-    .form-btn {
-      background-color: #25d366;
-      color: white;
-      border: none;
-      padding: 0.8rem;
-      font-size: 1rem;
-      border-radius: 8px;
-      cursor: pointer;
-    }
+.form-btn:hover {
+  background-color: #1ebe5b;
+}
 
-    .form-btn:hover {
-      background-color: #1ebe5b;
-    }
+footer {
+  text-align: center;
+  padding: 2rem 1rem;
+  color: #888;
+}
 
-    footer {
-      text-align: center;
-      padding: 2rem 1rem;
-      color: #888;
-    }
   </style>
 </head>
 <body>
-
   <header></header>
-
   <div class="container">
     <h2>Imóveis Disponíveis</h2>
     <div class="cards">
-      <!-- Cards de imóveis inseridos aqui -->
-    </div>
+      <div class="card">
+        <img src="https://images.vivareal.com/imoveis/original/703377582.jpg" alt="Casa 1" />
+        <div class="card-body">
+          <h3>Casa com 2 Quartos em Itaguá</h3>
+          <p>2 quartos, Wi-Fi, ar-condicionado, churrasqueira. A 400m da praia.</p>
+          <p><strong>R$ 550,00 por dia</strong></p>
+          <a href="https://wa.me/5512997994449" class="btn">Reservar no WhatsApp</a>
+        </div>
+      </div>
+      <div class="card">
+        <img src="https://images.vivareal.com/imoveis/original/704358086.jpg" alt="Casa 2" />
+        <div class="card-body">
+          <h3>Apartamento 3 Quartos - Praia Grande</h3>
+          <p>Próximo ao mar, com sacada gourmet e vista linda.</p>
+          <p><strong>R$ 720,00 por dia</strong></p>
+          <a href="https://wa.me/5512997994449" class="btn">Reservar no WhatsApp</a>
+        </div>
+      </div>
+      <div class="card">
+        <img src="https://images.vivareal.com/imoveis/original/703662812.jpg" alt="Casa 3" />
+        <div class="card-body">
+          <h3>Apto Pé na Areia - Toninhas</h3>
+          <p>Com piscina, garagem, ar-condicionado e Wi-Fi.</p>
+          <p><strong>R$ 600,00 por dia</strong></p>
+          <a href="https://wa.me/5512997994449" class="btn">Reservar no WhatsApp</a>
+        </div>
+      </div>
+      <div class="card">
+        <img src="https://images.vivareal.com/imoveis/original/703859986.jpg" alt="Casa 4" />
+        <div class="card-body">
+          <h3>Chalé em Maranduba</h3>
+          <p>2 quartos, quintal, cozinha equipada. Perto da praia.</p>
+          <p><strong>R$ 420,00 por dia</strong></p>
+          <a href="https://wa.me/5512997994449" class="btn">Reservar no WhatsApp</a>
+        </div>
+      </div>
+      <div class="card">
+        <img src="https://images.vivareal.com/imoveis/original/703450022.jpg" alt="Casa 5" />
+        <div class="card-body">
+          <h3>Apartamento Familiar - Itaguá</h3>
+          <p>Espaçoso, com varanda, cozinha completa e garagem.</p>
+          <p><strong>R$ 500,00 por dia</strong></p>
+          <a href="https://wa.me/5512997994449" class="btn">Reservar no WhatsApp</a>
+        </div>
+      </div>
+      <div class="card">
+        <img src="https://images.vivareal.com/imoveis/original/703899098.jpg" alt="Casa 6" />
+        <div class="card-body">
+          <h3>Casa Piscina Privativa - Enseada</h3>
+          <p>Ideal para grupos, área gourmet, sala ampla.</p>
+          <p><strong>R$ 680,00 por dia</strong></p>
+          <a href="https://wa.me/5512997994449" class="btn">Reservar no WhatsApp</a>
+        </div>
+      </div>
+      <div class="card">
+        <img src="https://images.vivareal.com/imoveis/original/703998651.jpg" alt="Casa 7" />
+        <div class="card-body">
+          <h3>Studio Itaguá - Moderno</h3>
+          <p>Compacto e confortável, perto do shopping.</p>
+          <p><strong>R$ 280,00 por dia</strong></p>
+          <a href="https://wa.me/5512997994449" class="btn">Reservar no WhatsApp</a>
+        </div>
+      </div>
+      <div class="card">
+        <img src="https://images.vivareal.com/imoveis/original/704112300.jpg" alt="Casa 8" />
+        <div class="card-body">
+          <h3>Casa 3 Quartos - Praia Grande</h3>
+          <p>Ótima localização, sala ampla e área verde.</p>
+          <p><strong>R$ 700,00 por dia</strong></p>
+          <a href="https://wa.me/5512997994449" class="btn">Reservar no WhatsApp</a>
+        </div>
+      </div>
+      <div class="card">
+        <img src="https://images.vivareal.com/imoveis/original/704135649.jpg" alt="Casa 9" />
+        <div class="card-body">
+          <h3>Kitnet Econômica - Perequê-Açu</h3>
+          <p>Para casal ou solteiro, simples e acessível.</p>
+          <p><strong>R$ 200,00 por dia</strong></p>
+          <a href="https://wa.me/5512997994449" class="btn">Reservar no WhatsApp</a>
+        </div>
+      </div>
+      <div class="card">
+        <img src="https://images.vivareal.com/imoveis/original/704200194.jpg" alt="Casa 10" />
+        <div class="card-body">
+          <h3>Apartamento com Varanda - Toninhas</h3>
+          <p>2 quartos, varanda, ar-condicionado e Wi-Fi.</p>
+          <p><strong>R$ 530,00 por dia</strong></p>
+          <a href="https://wa.me/5512997994449" class="btn">Reservar no WhatsApp</a>
+        </div>
+      </div>
+    </div><div class="form-section">
+  <h2>Anuncie Seu Imóvel</h2>
+  <p>Preencha o formulário abaixo e entraremos em contato com você!</p>
+  <form onsubmit="event.preventDefault(); enviarFormulario();">
+    <input type="text" id="nome" placeholder="Seu nome" required />
+    <input type="tel" id="telefone" placeholder="Seu telefone (com DDD)" required />
+    <select id="tipo" required>
+      <option value="">Tipo de imóvel</option>
+      <option value="Casa">Casa</option>
+      <option value="Apartamento">Apartamento</option>
+      <option value="Kitnet">Kitnet</option>
+      <option value="Outro">Outro</option>
+    </select>
+    <textarea id="mensagem" rows="4" placeholder="Informações sobre o imóvel" required></textarea>
+    <button type="submit" class="form-btn">Enviar para o WhatsApp</button>
+  </form>
+</div>
 
-    <div class="form-section">
-      <h2>Anuncie Seu Imóvel</h2>
-      <p>Preencha o formulário abaixo e entraremos em contato com você!</p>
-      <form onsubmit="event.preventDefault(); enviarFormulario();">
-        <input type="text" id="nome" placeholder="Seu nome" required />
-        <input type="tel" id="telefone" placeholder="Seu telefone (com DDD)" required />
-        <select id="tipo" required>
-          <option value="">Tipo de imóvel</option>
-          <option value="Casa">Casa</option>
-          <option value="Apartamento">Apartamento</option>
-          <option value="Kitnet">Kitnet</option>
-          <option value="Outro">Outro</option>
-        </select>
-        <textarea id="mensagem" rows="4" placeholder="Informações sobre o imóvel" required></textarea>
-        <button type="submit" class="form-btn">Enviar para o WhatsApp</button>
-      </form>
-    </div>
-  </div>
-
-  <footer>
+  </div>  <footer>
     © 2025 Pé na Areia Ubatuba. Todos os direitos reservados.
-  </footer>
-
-  <script>
+  </footer>  <script>
     function enviarFormulario() {
       const nome = document.getElementById("nome").value;
       const telefone = document.getElementById("telefone").value;
@@ -166,7 +246,5 @@
       const url = `https://wa.me/5512997994449?text=${encodeURIComponent(texto)}`;
       window.open(url, "_blank");
     }
-  </script>
-
-</body>
-</html>
+  </script></body>
+                                                                                  </html>
